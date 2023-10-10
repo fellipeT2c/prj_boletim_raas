@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="869.6,1297.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:uasa="clr-namespace:UiPath.Activities.System.Arrays;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="869.6,1939.2" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System.Net.Mail" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:uasa="clr-namespace:UiPath.Activities.System.Arrays;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>GlobalConstantsNamespace</x:String>
@@ -127,7 +127,7 @@
       <AssemblyReference>Microsoft.Exchange.WebServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="548.8,1232.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="572.8,1874.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="varDataTable" />
       <Variable x:TypeArguments="sd:DataTable" Name="varDtFilter" />
@@ -149,7 +149,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch sap2010:Annotation.AnnotationText="Leitura do E-mail com os arquivos do raas" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="486.4,345.6" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <TryCatch sap2010:Annotation.AnnotationText="Leitura do E-mail com os arquivos do raas" DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="510.4,987.2" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -158,30 +158,29 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <TryCatch.Try>
-        <Sequence sap:VirtualizedContainerService.HintSize="449.6,83.2" sap2010:WorkflowViewState.IdRef="Sequence_21">
+        <Sequence sap:VirtualizedContainerService.HintSize="473.6,724.8" sap2010:WorkflowViewState.IdRef="Sequence_21">
           <Sequence.Variables>
             <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="mensagens" />
           </Sequence.Variables>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:GetOutlookMailMessages Filter="{x:Null}" FilterByMessageIds="{x:Null}" TimeoutMS="{x:Null}" Account="patricia.mello@t2cgroup.com.br" DisplayName="Get Outlook Mail Messages" GetAttachements="False" sap:VirtualizedContainerService.HintSize="411.2,24.8" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_3" MailFolder="Raas" MarkAsRead="False" Messages="[mensagens]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Top="1" />
-          <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="411.2,668.8" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[mensagens]">
+          <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="411.2,548" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[mensagens]">
             <ui:ForEach.Body>
               <ActivityAction x:TypeArguments="snm:MailMessage">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="currentItem" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="377.6,480.8" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="377.6,360" sap2010:WorkflowViewState.IdRef="Sequence_17">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:DeleteFolderX DisplayName="Delete Folder" sap:VirtualizedContainerService.HintSize="334.4,80.8" sap2010:WorkflowViewState.IdRef="DeleteFolderX_1" Path="C:\Temp\Arquivo raas\" Recursive="True" />
                   <ui:SaveMailAttachments Attachments="{x:Null}" DisplayName="Save Attachments" ExcludeInlineAttachments="False" FolderPath="C:\Temp\Arquivo raas\" sap:VirtualizedContainerService.HintSize="334.4,88" sap2010:WorkflowViewState.IdRef="SaveMailAttachments_1" Message="[currentItem]" OverwriteExisting="True" />
                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,142.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Salvo Arquivos na Pasta: &quot;+&quot;C:\Temp\Arquivo raas\&quot;]" />
                 </Sequence>
@@ -191,7 +190,7 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="452.8,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="476.8,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -207,7 +206,7 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <Sequence sap2010:Annotation.AnnotationText="Leitura de Dados de Entrada e Assets" DisplayName="Dados de Entrada/Assets" sap:VirtualizedContainerService.HintSize="486.4,114.4" sap2010:WorkflowViewState.IdRef="Sequence_26">
+    <Sequence sap2010:Annotation.AnnotationText="Leitura de Dados de Entrada e Assets" DisplayName="Dados de Entrada/Assets" sap:VirtualizedContainerService.HintSize="510.4,114.4" sap2010:WorkflowViewState.IdRef="Sequence_26">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -260,7 +259,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </ui:GetRobotCredential>
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="Atribuição de Variaveis para manipulação de dados" DisplayName="Atribuição de Variavéis" sap:VirtualizedContainerService.HintSize="486.4,114.4" sap2010:WorkflowViewState.IdRef="Sequence_27">
+    <Sequence sap2010:Annotation.AnnotationText="Atribuição de Variaveis para manipulação de dados" DisplayName="Atribuição de Variavéis" sap:VirtualizedContainerService.HintSize="510.4,114.4" sap2010:WorkflowViewState.IdRef="Sequence_27">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -337,7 +336,7 @@
         </sap:WorkflowViewStateService.ViewState>
       </Assign>
     </Sequence>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Filtro em Arquivos para construir Boletins de Medição" DataTable="[vardtEmpresas]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="486.4,96.8" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Filtro em Arquivos para construir Boletins de Medição" DataTable="[vardtEmpresas]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="510.4,96.8" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
@@ -541,7 +540,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEachRow>
-    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" sap2010:Annotation.AnnotationText="Envio de Arquivos por e-mail" AttachmentsCollection="[var_ListStrArqAnexo]" Body="&#x9;Bom dia,&#xA;&#xA;&#x9;Segue em anexo boletins de medição do raas.&#xA;&#x9;&#xA;&#x9;FAVOR VALIDAR E RETORNAR CASO EXISTA ALGUMA DIVERGÊNCIA&#xA;&#x9;&#xA;&#x9;Atenciosamente,&#xA;&#x9;Sustententação" DisplayName="Send SMTP Mail Message" Email="[var_strLogin]" EnableSSL="True" From="[var_strLogin]" sap:VirtualizedContainerService.HintSize="486.4,289.6" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Name="Infra" Password="[new System.Net.NetworkCredential(string.Empty, var_SStringSenha.ToString).Password]" Port="587" SecureConnection="Auto" Server="smtp.office365.com" Subject="Sustentação - Boletins de Medição Raas" To="[var_strEmailsDest]">
+    <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" ContinueOnError="{x:Null}" MailMessage="{x:Null}" ReplyTo="{x:Null}" Result="{x:Null}" SecurePassword="{x:Null}" TimeoutMS="{x:Null}" UseOAuth="{x:Null}" sap2010:Annotation.AnnotationText="Envio de Arquivos por e-mail" AttachmentsCollection="[var_ListStrArqAnexo]" Body="&#x9;Bom dia,&#xA;&#xA;&#x9;Segue em anexo boletins de medição do raas.&#xA;&#x9;&#xA;&#x9;FAVOR VALIDAR E RETORNAR CASO EXISTA ALGUMA DIVERGÊNCIA&#xA;&#x9;&#xA;&#x9;Atenciosamente,&#xA;&#x9;Sustententação" DisplayName="Send SMTP Mail Message" Email="[var_strLogin]" EnableSSL="True" From="[var_strLogin]" sap:VirtualizedContainerService.HintSize="510.4,289.6" sap2010:WorkflowViewState.IdRef="SendMail_1" IgnoreCRL="False" IsBodyHtml="False" Name="Infra" Password="[new System.Net.NetworkCredential(string.Empty, var_SStringSenha.ToString).Password]" Port="587" SecureConnection="Auto" Server="smtp.office365.com" Subject="Sustentação - Boletins de Medição Raas" To="[var_strEmailsDest]">
       <ui:SendMail.Files>
         <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4" />
       </ui:SendMail.Files>
