@@ -1,1 +1,12 @@
 fellipe.fonseca@t2cgroup.com.br;gabriel.muniz@t2cgroup.com.br
+
+
+Infr@t2c
+
+
+git config --global user.name "fellipeT2c"
+
+
+git config --global user.email "fellipe.fonseca@t2cconsultoria.com.br"
+
+https://github.com/fellipeT2c/prj_boletim_raas
